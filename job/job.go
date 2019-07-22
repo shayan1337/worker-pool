@@ -1,4 +1,4 @@
-package worker_pool
+package job
 
 type Job struct {
 	requestId int
