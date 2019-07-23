@@ -1,3 +1,6 @@
+**WIP**
+
+
 This project involves an implementation of Worker Pools in Golang. Buffered channels are used to implement the input job queue and result queue. Goroutines are used to create a worker pool.
 
 **HOW IT WORKS**
