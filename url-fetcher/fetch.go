@@ -1,11 +1,12 @@
 package url_fetcher
 
-import "net/http"
+import (
+	"net/http"
+	. "worker-pool/job"
+	. "worker-pool/result"
+)
 
-func Fetch(url string) (*http.Response, error){
-	response, err := http.Get(url)
-	if err != nil {
-		return nil, err
-	}
-	return response, nil
+func Fetch(job Job) Result {
+	response, err := http.Get(job.Url())
+	return NewResult(job, response, err)
 }
