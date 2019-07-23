@@ -2,13 +2,15 @@ package main
 
 import (
 	"log"
+	. "worker-pool/job"
 	. "worker-pool/url-fetcher"
 )
 
 func main() {
-	response, err := Fetch("http://facebook.com")
-	if err != nil {
-		log.Fatal(err)
+	job := NewJob(1, "http://facebook.com")
+	result := Fetch(job)
+	if result.Err() != nil {
+		log.Fatal(result.Err())
 	}
-	log.Println(response)
+	log.Println(result.Response())
 }

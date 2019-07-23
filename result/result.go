@@ -23,7 +23,7 @@ func (this Result) Err() error {
 	return this.err
 }
 
-func (this Result) Response() http.Response {
+func (this Result) Response() *http.Response {
 	return this.response
 }
 
