@@ -5,6 +5,13 @@ type Job struct {
 	url string
 }
 
+func NewJob(requestId int, url string) Job {
+	return Job{
+		requestId: requestId,
+		url:       url,
+	}
+}
+
 func (this Job) Url() string {
 	return this.url
 }
