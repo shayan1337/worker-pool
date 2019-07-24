@@ -27,6 +27,6 @@ func (this Result) Response() *http.Response {
 	return this.response
 }
 
-func (this Result) Jon() Job {
+func (this Result) Job() Job {
 	return this.job
 }
