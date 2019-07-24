@@ -15,4 +15,8 @@ A goroutine reads the result from the output queue and prints it to the standard
 
 The job consists of a URL that is used by the routine to retrieve response from the URL. The response from the URL is placed on the output queue 
 
+
+Usage : 
+~~~~
+go run main.go
   
